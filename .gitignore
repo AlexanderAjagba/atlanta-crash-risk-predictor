@@ -1,0 +1,56 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Raw and processed datasets
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Trained model artifacts
+models/*
+!models/.gitkeep
+
+# Generated reports and figures
+reports/metrics/*
+reports/figures/*
+reports/.matplotlib/
+!reports/metrics/.gitkeep
+!reports/figures/.gitkeep
+
+# Frontend / Node
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/.nuxt/
+frontend/.cache/
+frontend/coverage/
+frontend/.vite/
+
+# Environment files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example

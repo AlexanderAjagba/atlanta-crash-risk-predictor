@@ -1,0 +1,22 @@
+{
+  "name": "atlanta-crash-risk-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/AlexanderAjagba/atlanta-crash-risk-predictor#readme",
+  "bugs": {
+    "url": "https://github.com/AlexanderAjagba/atlanta-crash-risk-predictor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderAjagba/atlanta-crash-risk-predictor.git"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "deck.gl": "^9.3.10",
+    "maplibre-gl": "^6.6.0"
+  }
+}
