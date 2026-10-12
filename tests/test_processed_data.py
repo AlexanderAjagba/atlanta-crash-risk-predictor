@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import pytest
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
@@ -21,6 +22,7 @@ TEST_PATH = PROCESSED_DIR / "test.parquet"
 FEATURE_COLUMNS_PATH = PROCESSED_DIR / "feature_columns.json"
 
 
+@pytest.mark.holdout
 def test_processed_data_outputs():
     cleaned = pd.read_parquet(CLEANED_PATH)
     train = pd.read_parquet(TRAIN_PATH)

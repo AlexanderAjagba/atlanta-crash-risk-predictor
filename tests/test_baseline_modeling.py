@@ -6,6 +6,7 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
+import pytest
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
@@ -85,6 +86,7 @@ def test_candidate_pipelines_can_be_loaded_and_used_for_prediction():
         assert len(predictions) == 5
 
 
+@pytest.mark.holdout
 def test_all_required_metrics_are_generated():
     metrics = _load_metrics()
     for section in [

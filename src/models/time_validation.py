@@ -75,6 +75,7 @@ def expanding_year_validation(
     train_df: pd.DataFrame,
     make_pipeline,
     use_sample_weight: bool = False,
+    feature_columns: list[str] | None = None,
 ) -> dict[str, Any]:
     fold_metrics: list[dict[str, Any]] = []
     fold_predictions: list[ValidationPrediction] = []
@@ -86,9 +87,9 @@ def expanding_year_validation(
         if fold_train["crash_datetime"].max() >= fold_validation["crash_datetime"].min():
             raise ValueError("Validation fold dates are not strictly after training dates.")
 
-        X_train = get_feature_matrix(fold_train)
+        X_train = get_feature_matrix(fold_train, feature_columns)
         y_train = fold_train["severe_crash"]
-        X_validation = get_feature_matrix(fold_validation)
+        X_validation = get_feature_matrix(fold_validation, feature_columns)
         y_validation = fold_validation["severe_crash"]
 
         pipeline = make_pipeline(X_train)

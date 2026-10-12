@@ -1,0 +1,2 @@
+# Optional dependency for the validation-only imbalance comparison.
+xgboost==3.4.1
